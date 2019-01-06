@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" href="img/icons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="img/icons/favicon-16x16.png" sizes="16x16" />
+
+    <title>Asp.NET</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/nivo-lightbox.css" rel="stylesheet" />
+    <link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+    <link href="css/owl.carousel.css" rel="stylesheet" media="screen" />
+    <link href="css/owl.theme.css" rel="stylesheet" media="screen" />
+    <link href="css/flexslider.css" rel="stylesheet" />
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="color/default.css" rel="stylesheet">
+    <link href="css/font-mfizz/font-mfizz.css" rel="stylesheet">
+    <script src="js/modernizr.custom.js"></script>
+
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+
+    <section class="main-section" id="asp-introduction">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="service-list col-lg-offset-6">
+                    <div class="service-list-col1">
+                        <i class="fa-windows"></i>
+                    </div>
+                </div>
+                <h2 id="what-is-aspnet-core">What is ASP.NET Core?</h2>
+                <p>ASP.NET Core is a new open-source and cross-platform framework for building modern cloud based internet connected
+                    applications, such as web apps, IoT apps and mobile backends. ASP.NET Core apps can run on <a href="https://www.microsoft.com/net/core/platform">.NET Core</a>                    or on the full .NET Framework. It was architected to provide an optimized development framework for apps
+                    that are deployed to the cloud or run on-premises. It consists of modular components with minimal overhead,
+                    so you retain flexibility while constructing your solutions. You can develop and run your ASP.NET Core
+                    apps cross-platform on Windows, Mac and Linux. ASP.NET Core is open source at <a href="https://github.com/aspnet/home">GitHub</a>.</p>
+                <h2 id="why-build-aspnet-core">Why build ASP.NET Core?</h2>
+                <p>The first preview release of ASP.NET came out almost 15 years ago as part of the .NET Framework. Since then
+                    millions of developers have used it to build and run great web apps, and over the years we have added
+                    and evolved many capabilities to it.</p>
+                <p>ASP.NET Core has a number of architectural changes that result in a much leaner and modular framework. ASP.NET
+                    Core is no longer based on <em>System.Web.dll</em>. It is based on a set of granular and well factored
+                    <a href="http://www.nuget.org/">NuGet</a> packages. This allows you to optimize your app to include just
+                    the NuGet packages you need. The benefits of a smaller app surface area include tighter security, reduced
+                    servicing, improved performance, and decreased costs in a pay-for-what-you-use model.</p>
+            </div>
+            
+    </section>
+    <section id="parallax-vs-code" class="home-section parallax text-light" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-center">
+                        <h2 class="big-heading highlight-dark wow bounceInDown" data-wow-delay="0.2s">Get VS code today !</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projects">
+        <div class="container">
+            <h2>Asp docs and references</h2>
+            <p>You can learn everything from official documentation</p>
+            <iframe src="https://docs.microsoft.com/en-us/aspnet/core/tutorials/" onload="this.width=(screen.width - (0.4*screen.width));" height="600"></iframe>
+        </div>
+    </section>
+   
+    <!-- Core JavaScript Files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/slippry.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/morphext.min.js"></script>
+    <script src="js/jquery.mb.YTPlayer.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.scrollTo.js"></script>
+    <script src="js/jquery.appear.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/nivo-lightbox.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/jquery.cbpQTRotator.js"></script>
+
+    <script>
+        $(function () {
+            $('a[href*="#"]:not([href="#"])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 2000);
+                        return false;
+                    }
+                }
+            });
+        });
+
+
+        $(function () {
+            $('#cbp-qtrotator').cbpQTRotator();
+
+        });
+
+        $(document).ready(function () {
+            $('#video').on('ended', function () {
+                intervalRewind = setInterval(function () {
+                    video.playbackRate = 1.0;
+                    if (video.currentTime == 0) {
+                        clearInterval(intervalRewind);
+                        video.play();
+                    }
+                    else {
+                        video.currentTime += -.1;
+                    }
+                }, 100);
+            });
+
+            $(".project-list-item").on("click", function () {
+                window.location.href = $(this).data("url");
+            })
+        });
+    </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-83024134-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
